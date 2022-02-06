@@ -1,7 +1,7 @@
 
   {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Constructor cost to win championship",
+    "description": "Constructor cost to win Championship",
     "data": {"url": "https://raw.githubusercontent.com/herg0001/FIT3179/main/Data/winningCost.csv"},
     "width": "container",
     "height": 250,
