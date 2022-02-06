@@ -1,22 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <title>My First HTML Document</title>
+  <title>F1 Across The Globe</title>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      font-family: 'Oxygen', sans-serif;
+      line-height: 1.5;
+    }
+
+    h1 {
+      font-weight: 900;
+      text-align: center;
+
+    }
+
+    body {
+      background-color: lightgray;
+    }
+
+    .page {
+      width: 850px;
+      background-color: white;
+      margin: auto;
+      padding: 70px;
+      padding-top: 35px;
+    }
+
+    .vis-container {
+      width: 100%;
+    }
+
+    .description h2,
+    h1 {
+      margin-top: 10px;
+    }
+
+    .description-right {
+      padding-left: 10px;
+    }
+
+    .description-left {
+      padding-right: 10px;
+    }
+
+    .pure-g {
+      margin-bottom: 25px;
+    }
+
+    .small-font {
+      font-size: 13px;
+    }
+  </style>
 </head>
+
 <body>
-    <h1>1. Introduction to HTML. (Level 1)</h1>
-    <h2>1.1 Creating Paragraphs (Level 2)</h2>
-    <p> Unit: FIT3179 Data visualization. </p>
-    <p> This is a paragraph about paragraphs. </p>
 
-    <h2> 1.2 Creating Tables (Level 2)</h2>
-    <h3> 1.2.1 Table Rows (Level 3)</h3>
-    <p> This is a third paragraph about table rows</p>
-    
-    <h3> 1.2.2 Table Columns (Level 3)</h3>
-    <p> This is a paragraph about table columns.</p>
+  <div class="page">
 
-    <h2> 1.3 Embedding Images (Level 2)</h2>
-    <p>This is the fourth paragraph about images in HTML. </p>
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h1><strong>F1 - ACROSS THE GLOBE</strong></h1>
+        <p>The advancment of technology observed in the last century has made the world a smaller place. This has resulted
+          in sports expanding into global spectacles - which no sport better demonstrates than <i><b>Formula 1</b></i>. F1
+          has risen to become the pinnacle of motor-racing in the world and flaunts itself as such all across the globe. Advancements
+          in travel, logistics, medicine and communication beg the question: how much entertainment can be spread how far across the world.
+        </p>
+        <p>
+          The following visualisations will attempt to address this question by using statistics collected from the 71 seasons Formula 1 has
+          provided.
+        </p>
+      </div>
+    </div>
+
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div id="vis1" class="vis-container"></div>
+      </div>
+    </div>
+
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+          <p>The aforementioned improvements in travel have resulted in a large number of countries which, historically, did not have 
+            a presence in Formula 1 producing drivers. The Formula 1 grand championship has seen over <strong>a thousand</strong> drivers
+            participate hailing from all over the world. </p>
+      </div>
+    </div>
+
+
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div id="vis3" class="vis-container"></div>
+      </div>
+    </div>
+
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <p>
+          The vast number of drivers that have participated in the championship is evident here as well as the large variety of nationalities
+          these drivers have represented. There are drivers hailing from every majorly populated continent on the planet.</p>
+      </div>
+    </div>
+
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="description description-right">
+          <h2>Increase in Races over the years</h2>
+          <p>One trend that reflects the growht of Formula 1 over the years is that number of races that are held each season. It can be seen that
+            the number of races has dramatically increased from merely <strong>7</strong> in Fromula 1's maiden season to the impressive <strong>23</strong>
+            races the championship enndeavours to produce in 2022. </p>
+        </div>
+      </div>
+      <div class="pure-u-1-2">
+        <div id="vis2" class="vis-container"></div>
+      </div>
+    </div>
+
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div id="vis4" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-2">
+        <div class="description description-right">
+          <h2>Cost of competition</h2>
+          <p>It is a well known fact that competing in the championship is a costly venture with each individual constructor 
+            having to spend millions upon millions of dollars to have a shot at the title.
+            The cost of a championship title to a constructor has seen a steady increase over the years. Red Bull Racing spent <strong>167 million British Pounds</strong>
+            in their 2008 championship seaons while Mercedes Petronas AMG finished their 2020 championship season having invested <strong> 459 million </strong>
+            The increase in expediture can be explained with the sports globalisation as constructors are spending more and more on such things as the transporation
+            of vehicles, team members and temporary operating facilites.
+
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="pure-g">
+      <div class="pure-u-1-1 small-font">
+        <p>A visualisation by: <a href="https://github.com/herg0001">Harun Ergi</a>. Data sourced from <a
+            href="https://www.kaggle.com/rohanrao/formula-1-world-championship-1950-2020"
+            target="_blank">public dataset found on Kaggle.com</href>.</p>
+      </div>
+    </div>
+  </div> 
+
+  <script type="text/javascript">
+    var specVis1 = "./Visualisations/symbolMap.json";
+    var specVis2 = "./Visualisations/racesPerYearLine.json";
+    var specVis3 = "./Visualisations/barChart.json";
+    var specVis4 = "./Visualisations/areaChart.json";
+    var specVis5 = "./Visualisations/dotplot.json";
+
+    vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
+    }).catch(console.error);
+
+    vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+    }).catch(console.error);
+
+    vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
+    }).catch(console.error);
+
+    vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+    }).catch(console.error);
+  </script>
 </body>
+
 </html>

@@ -1,0 +1,72 @@
+
+  {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Constructor cost to win championship",
+    "data": {"url": "https://raw.githubusercontent.com/herg0001/FIT3179/main/winningCost.csv"},
+    "width": "container",
+    "height": 250,
+    "mark": {
+        "type": "area", 
+        "line": {
+            "color": "darkred"
+          },
+        "point": {
+            "color": "darkred"
+          },
+        "color": {
+            "x1": 1,
+            "y1": 1,
+            "x2": 1,
+            "y2": 0,
+            "gradient": "linear",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "white"
+              },
+              {
+                "offset": 1,
+                "color": "darkred"
+              }
+            ]
+          }},
+    "encoding": {
+      "x": {"field": "year", "type": "temporal", "title": "Year"},
+      "y": {"field": "cost", "type": "quantitative", "title": "Cost in Millions"},
+      "tooltip": [
+        {
+            "field": "cost",
+            "type": "quantitative",
+            "title": "Cost Millions (GBP)"
+        },
+        {
+            "field": "year",
+            "type": "temporal",
+            "timeUnit": "year",
+            "title": "Year"
+        }
+    ]
+    },
+    "config": {
+        "view": {
+          "stroke": null
+        },
+        "axis": {
+          "labelFont": "Oxygen",
+          "titleFont": "Oxygen"
+        },
+        "legend": {
+          "labelFont": "Oxygen",
+          "titleFont": "Oxygen"
+        },
+        "header": {
+          "labelFont": "Oxygen",
+          "titleFont": "Oxygen"
+        },
+        "title": {
+          "font": "Oxygen",
+          "fontSize": 16,
+          "fontWeight": 600
+        }
+      }
+  }

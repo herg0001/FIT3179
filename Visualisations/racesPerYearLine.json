@@ -1,0 +1,85 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "width": "container",
+    "height": 250,
+    "title": "Races held per season by year",
+    "data": {
+        "url": "https://raw.githubusercontent.com/herg0001/FIT3179/main/seasons.csv"
+    },
+    "encoding": {
+        "x": {
+            "field": "year",
+            "type": "temporal",
+            "title": "Year"
+        },
+        "y": {
+            "field": "races_held",
+            "type": "quantitative",
+            "title": "Number of Races"
+        },
+        "color": {
+            "value": "red"
+        }
+    },
+    "layer": [
+        {
+            "description": "transparent layer to make it easier to trigger selection",
+            "selection": {
+                "hover": {
+                    "type": "single",
+                    "on": "mouseover",
+                    "empty": "all",
+                    "fields": [
+                        "Gender"
+                    ]
+                }
+            },
+            "mark": {
+                "type": "line",
+                "point": true,
+                "strokeWidth": 10,
+                "stroke": "transparent"
+            },
+            "encoding": {
+                "tooltip": [
+                    {
+                        "field": "races_held",
+                        "type": "quantitative",
+                        "title": "Number of Races"
+                    },
+                    {
+                        "field": "year",
+                        "type": "temporal",
+                        "timeUnit": "year",
+                        "title": "Year"
+                    }
+                ]
+            }
+        },
+        {
+            "mark": "line"
+        }
+    ],
+    "config": {
+        "view": {
+            "stroke": null
+        },
+        "axis": {
+            "labelFont": "Oxygen",
+            "titleFont": "Oxygen"
+        },
+        "legend": {
+            "labelFont": "Oxygen",
+            "titleFont": "Oxygen"
+        },
+        "header": {
+            "labelFont": "Oxygen",
+            "titleFont": "Oxygen"
+        },
+        "title": {
+            "font": "Oxygen",
+            "fontSize": 16,
+            "fontWeight": 600
+        }
+    }
+}
