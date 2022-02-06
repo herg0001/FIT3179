@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": "container",
     "height": 600,
-    "data": { "url": "https://raw.githubusercontent.com/herg0001/FIT3179/main/drivers.csv"},
+    "data": { "url": "https://raw.githubusercontent.com/herg0001/FIT3179/main/Data/drivers.csv"},
     "mark": { "type": "bar" },
     "encoding": {
         "y": {"field": "nationality", "type": "nominal", "title": "Nation"},
