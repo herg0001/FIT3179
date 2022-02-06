@@ -4,7 +4,7 @@
     "height": 250,
     "title": "Races held per season by year",
     "data": {
-        "url": "https://raw.githubusercontent.com/herg0001/FIT3179/main/seasons.csv"
+        "url": "https://raw.githubusercontent.com/herg0001/FIT3179/main/Data/seasons.csv"
     },
     "encoding": {
         "x": {
